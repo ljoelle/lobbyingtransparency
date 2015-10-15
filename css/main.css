@@ -74,6 +74,7 @@ html {
 html,
 button,
 body > article .next,
+body > article .previous,
 html.index body .hero article > div > a:not(.hashtag),
 input,
 select,
@@ -355,7 +356,8 @@ legend {
  * 3. Improves appearance and consistency in all browsers.
  */
 /* line 388, /Users/sam/www/sites/okfn/lobbyingtransparency/source/css/_normalize.scss */
-button, body > article .next, html.index body .hero article > div > a:not(.hashtag),
+button, body > article .next,
+body > article .previous, html.index body .hero article > div > a:not(.hashtag),
 input,
 select,
 textarea {
@@ -373,7 +375,8 @@ textarea {
  * the UA stylesheet.
  */
 /* line 403, /Users/sam/www/sites/okfn/lobbyingtransparency/source/css/_normalize.scss */
-button, body > article .next, html.index body .hero article > div > a:not(.hashtag),
+button, body > article .next,
+body > article .previous, html.index body .hero article > div > a:not(.hashtag),
 input {
   line-height: normal; }
 
@@ -387,7 +390,8 @@ input {
  *    Known issue: inner spacing remains in IE 6.
  */
 /* line 418, /Users/sam/www/sites/okfn/lobbyingtransparency/source/css/_normalize.scss */
-button, body > article .next, html.index body .hero article > div > a:not(.hashtag),
+button, body > article .next,
+body > article .previous, html.index body .hero article > div > a:not(.hashtag),
 html input[type="button"],
 input[type="reset"],
 input[type="submit"] {
@@ -402,7 +406,8 @@ input[type="submit"] {
  * Re-set default cursor for disabled elements.
  */
 /* line 431, /Users/sam/www/sites/okfn/lobbyingtransparency/source/css/_normalize.scss */
-button[disabled], body > article [disabled].next, html.index body .hero article > div > a[disabled]:not(.hashtag),
+button[disabled], body > article [disabled].next,
+body > article [disabled].previous, html.index body .hero article > div > a[disabled]:not(.hashtag),
 input[disabled] {
   cursor: default; }
 
@@ -451,7 +456,8 @@ input[type="search"]::-webkit-search-decoration {
  * Removes inner padding and border in Firefox 3+.
  */
 /* line 478, /Users/sam/www/sites/okfn/lobbyingtransparency/source/css/_normalize.scss */
-button::-moz-focus-inner, body > article .next::-moz-focus-inner, html.index body .hero article > div > a:not(.hashtag)::-moz-focus-inner,
+button::-moz-focus-inner, body > article .next::-moz-focus-inner,
+body > article .previous::-moz-focus-inner, html.index body .hero article > div > a:not(.hashtag)::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
   padding: 0; }
@@ -494,6 +500,7 @@ html {
 input[type="button"], input[type="reset"], input[type="submit"],
 button,
 body > article .next,
+body > article .previous,
 html.index body .hero article > div > a:not(.hashtag) {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -520,9 +527,11 @@ html.index body .hero article > div > a:not(.hashtag) {
   input[type="button"]:hover, input[type="button"]:focus, input[type="reset"]:hover, input[type="reset"]:focus, input[type="submit"]:hover, input[type="submit"]:focus,
   button:hover,
   body > article .next:hover,
+  body > article .previous:hover,
   html.index body .hero article > div > a:hover:not(.hashtag),
   button:focus,
   body > article .next:focus,
+  body > article .previous:focus,
   html.index body .hero article > div > a:focus:not(.hashtag) {
     background-color: #005d5a;
     color: #fff; }
@@ -530,6 +539,7 @@ html.index body .hero article > div > a:not(.hashtag) {
   input[type="button"]:disabled, input[type="reset"]:disabled, input[type="submit"]:disabled,
   button:disabled,
   body > article .next:disabled,
+  body > article .previous:disabled,
   html.index body .hero article > div > a:disabled:not(.hashtag) {
     cursor: not-allowed;
     opacity: 0.5; }
@@ -1113,31 +1123,39 @@ body > article {
       body > article aside .footnotes ol p {
         margin-bottom: 0; }
   /* line 402, /Users/sam/www/sites/okfn/lobbyingtransparency/source/css/main.css.scss */
-  body > article .next {
+  body > article .next,
+  body > article .previous {
     margin-top: small-spacing;
     margin-bottom: 0.8rem; }
+    /* line 408, /Users/sam/www/sites/okfn/lobbyingtransparency/source/css/main.css.scss */
+    body > article .next span,
+    body > article .previous span {
+      font-weight: normal; }
+  /* line 412, /Users/sam/www/sites/okfn/lobbyingtransparency/source/css/main.css.scss */
+  body > article .previous {
+    background-color: #666; }
 
-/* line 411, /Users/sam/www/sites/okfn/lobbyingtransparency/source/css/main.css.scss */
+/* line 419, /Users/sam/www/sites/okfn/lobbyingtransparency/source/css/main.css.scss */
 html.index {
   height: 100%; }
-  /* line 415, /Users/sam/www/sites/okfn/lobbyingtransparency/source/css/main.css.scss */
+  /* line 423, /Users/sam/www/sites/okfn/lobbyingtransparency/source/css/main.css.scss */
   html.index body {
     background-image: url("../img/home-image.jpg");
     background-position: center center;
     background-size: cover; }
     @media only screen and (min-width: 53.75rem) and (min-height: 620px) {
-      /* line 415, /Users/sam/www/sites/okfn/lobbyingtransparency/source/css/main.css.scss */
+      /* line 423, /Users/sam/www/sites/okfn/lobbyingtransparency/source/css/main.css.scss */
       html.index body {
         height: 100%; } }
-    /* line 423, /Users/sam/www/sites/okfn/lobbyingtransparency/source/css/main.css.scss */
+    /* line 431, /Users/sam/www/sites/okfn/lobbyingtransparency/source/css/main.css.scss */
     html.index body .hero {
       background-color: rgba(0, 169, 165, 0.87);
       color: #fff; }
       @media only screen and (min-width: 53.75rem) and (min-height: 620px) {
-        /* line 423, /Users/sam/www/sites/okfn/lobbyingtransparency/source/css/main.css.scss */
+        /* line 431, /Users/sam/www/sites/okfn/lobbyingtransparency/source/css/main.css.scss */
         html.index body .hero {
           height: 100%; } }
-      /* line 431, /Users/sam/www/sites/okfn/lobbyingtransparency/source/css/main.css.scss */
+      /* line 439, /Users/sam/www/sites/okfn/lobbyingtransparency/source/css/main.css.scss */
       html.index body .hero article {
         max-width: 68rem;
         margin-left: auto;
@@ -1150,53 +1168,53 @@ html.index {
           content: "";
           display: table; }
         @media only screen and (min-width: 53.75rem) and (min-height: 620px) {
-          /* line 431, /Users/sam/www/sites/okfn/lobbyingtransparency/source/css/main.css.scss */
+          /* line 439, /Users/sam/www/sites/okfn/lobbyingtransparency/source/css/main.css.scss */
           html.index body .hero article {
             height: 100%;
             display: table; } }
-        /* line 441, /Users/sam/www/sites/okfn/lobbyingtransparency/source/css/main.css.scss */
+        /* line 449, /Users/sam/www/sites/okfn/lobbyingtransparency/source/css/main.css.scss */
         html.index body .hero article > div {
           font-size: 1.0625rem;
           padding-left: 1.6rem;
           padding-right: 1.6rem; }
-          /* line 446, /Users/sam/www/sites/okfn/lobbyingtransparency/source/css/main.css.scss */
+          /* line 454, /Users/sam/www/sites/okfn/lobbyingtransparency/source/css/main.css.scss */
           html.index body .hero article > div .menu {
             margin-left: -14px;
             margin-top: -14px; }
           @media only screen and (min-width: 53.75rem) and (min-height: 620px) {
-            /* line 441, /Users/sam/www/sites/okfn/lobbyingtransparency/source/css/main.css.scss */
+            /* line 449, /Users/sam/www/sites/okfn/lobbyingtransparency/source/css/main.css.scss */
             html.index body .hero article > div {
               display: table-cell;
               vertical-align: middle; }
-              /* line 455, /Users/sam/www/sites/okfn/lobbyingtransparency/source/css/main.css.scss */
+              /* line 463, /Users/sam/www/sites/okfn/lobbyingtransparency/source/css/main.css.scss */
               html.index body .hero article > div .menu {
                 position: absolute;
                 top: 17px;
                 left: 11px;
                 padding: 0;
                 margin: 0; } }
-          /* line 466, /Users/sam/www/sites/okfn/lobbyingtransparency/source/css/main.css.scss */
+          /* line 474, /Users/sam/www/sites/okfn/lobbyingtransparency/source/css/main.css.scss */
           html.index body .hero article > div header {
             font-family: "Montserrat", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
             font-size: 1.875rem;
             line-height: 1.2;
             margin-top: 0.53333rem; }
             @media (min-width: 40rem) {
-              /* line 466, /Users/sam/www/sites/okfn/lobbyingtransparency/source/css/main.css.scss */
+              /* line 474, /Users/sam/www/sites/okfn/lobbyingtransparency/source/css/main.css.scss */
               html.index body .hero article > div header {
                 font-size: 2.625rem; } }
-            /* line 475, /Users/sam/www/sites/okfn/lobbyingtransparency/source/css/main.css.scss */
+            /* line 483, /Users/sam/www/sites/okfn/lobbyingtransparency/source/css/main.css.scss */
             html.index body .hero article > div header h1 {
               margin-bottom: 0.3125rem;
               font-size: 2rem; }
               @media (min-width: 40rem) {
-                /* line 475, /Users/sam/www/sites/okfn/lobbyingtransparency/source/css/main.css.scss */
+                /* line 483, /Users/sam/www/sites/okfn/lobbyingtransparency/source/css/main.css.scss */
                 html.index body .hero article > div header h1 {
                   font-size: 3.25rem; } }
-          /* line 484, /Users/sam/www/sites/okfn/lobbyingtransparency/source/css/main.css.scss */
+          /* line 492, /Users/sam/www/sites/okfn/lobbyingtransparency/source/css/main.css.scss */
           html.index body .hero article > div a {
             color: #fff; }
-          /* line 488, /Users/sam/www/sites/okfn/lobbyingtransparency/source/css/main.css.scss */
+          /* line 496, /Users/sam/www/sites/okfn/lobbyingtransparency/source/css/main.css.scss */
           html.index body .hero article > div > a:not(.hashtag) {
             color: #00a9a5;
             background-color: #fff;
@@ -1205,25 +1223,25 @@ html.index {
             text-align: center;
             padding-bottom: 0.7em; }
             @media (min-width: 40rem) {
-              /* line 488, /Users/sam/www/sites/okfn/lobbyingtransparency/source/css/main.css.scss */
+              /* line 496, /Users/sam/www/sites/okfn/lobbyingtransparency/source/css/main.css.scss */
               html.index body .hero article > div > a:not(.hashtag) {
                 display: inline-block;
                 margin-top: 0.8rem; } }
 
-/* line 509, /Users/sam/www/sites/okfn/lobbyingtransparency/source/css/main.css.scss */
+/* line 517, /Users/sam/www/sites/okfn/lobbyingtransparency/source/css/main.css.scss */
 html.standards_index body {
   background-image: url("../img/home-image.jpg");
   background-position: center center;
   background-size: cover; }
   @media only screen and (min-width: 53.75rem) and (min-height: 620px) {
-    /* line 509, /Users/sam/www/sites/okfn/lobbyingtransparency/source/css/main.css.scss */
+    /* line 517, /Users/sam/www/sites/okfn/lobbyingtransparency/source/css/main.css.scss */
     html.standards_index body {
       height: 100%; } }
-/* line 517, /Users/sam/www/sites/okfn/lobbyingtransparency/source/css/main.css.scss */
+/* line 525, /Users/sam/www/sites/okfn/lobbyingtransparency/source/css/main.css.scss */
 html.standards_index .page-header,
 html.standards_index .contents {
   background-color: rgba(0, 169, 165, 0.87); }
-/* line 523, /Users/sam/www/sites/okfn/lobbyingtransparency/source/css/main.css.scss */
+/* line 531, /Users/sam/www/sites/okfn/lobbyingtransparency/source/css/main.css.scss */
 html.standards_index .contents > ul {
   max-width: 68rem;
   margin-left: auto;
@@ -1234,11 +1252,11 @@ html.standards_index .contents > ul {
     clear: both;
     content: "";
     display: table; }
-  /* line 527, /Users/sam/www/sites/okfn/lobbyingtransparency/source/css/main.css.scss */
+  /* line 535, /Users/sam/www/sites/okfn/lobbyingtransparency/source/css/main.css.scss */
   html.standards_index .contents > ul li {
     margin-bottom: 1.618em; }
     @media (min-width: 40rem) and (max-width: 53.75rem) {
-      /* line 527, /Users/sam/www/sites/okfn/lobbyingtransparency/source/css/main.css.scss */
+      /* line 535, /Users/sam/www/sites/okfn/lobbyingtransparency/source/css/main.css.scss */
       html.standards_index .contents > ul li {
         float: left;
         display: block;
@@ -1255,7 +1273,7 @@ html.standards_index .contents > ul {
         html.standards_index .contents > ul li:nth-child(3n+1) {
           clear: left; } }
     @media (min-width: 53.75rem) {
-      /* line 527, /Users/sam/www/sites/okfn/lobbyingtransparency/source/css/main.css.scss */
+      /* line 535, /Users/sam/www/sites/okfn/lobbyingtransparency/source/css/main.css.scss */
       html.standards_index .contents > ul li {
         float: left;
         display: block;
@@ -1271,7 +1289,7 @@ html.standards_index .contents > ul {
         /* line 83, /Users/sam/www/sites/okfn/lobbyingtransparency/source/css/neat/grid/_omega.scss */
         html.standards_index .contents > ul li:nth-child(4n+1) {
           clear: left; } }
-    /* line 540, /Users/sam/www/sites/okfn/lobbyingtransparency/source/css/main.css.scss */
+    /* line 548, /Users/sam/www/sites/okfn/lobbyingtransparency/source/css/main.css.scss */
     html.standards_index .contents > ul li a {
       display: block;
       width: 100%;
@@ -1281,17 +1299,17 @@ html.standards_index .contents > ul {
       font-family: "Montserrat", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
       text-transform: uppercase; }
       @media (min-width: 40rem) {
-        /* line 540, /Users/sam/www/sites/okfn/lobbyingtransparency/source/css/main.css.scss */
+        /* line 548, /Users/sam/www/sites/okfn/lobbyingtransparency/source/css/main.css.scss */
         html.standards_index .contents > ul li a {
           display: table-cell;
           vertical-align: middle;
           height: 32vh; } }
 
-/* line 561, /Users/sam/www/sites/okfn/lobbyingtransparency/source/css/main.css.scss */
+/* line 569, /Users/sam/www/sites/okfn/lobbyingtransparency/source/css/main.css.scss */
 .site-footer {
   background-color: #333;
   color: #fff; }
-  /* line 565, /Users/sam/www/sites/okfn/lobbyingtransparency/source/css/main.css.scss */
+  /* line 573, /Users/sam/www/sites/okfn/lobbyingtransparency/source/css/main.css.scss */
   .site-footer > footer {
     padding: 1.6rem 1.6rem 0.8rem 1.6rem;
     max-width: 68rem;
@@ -1303,31 +1321,31 @@ html.standards_index .contents > ul {
       clear: both;
       content: "";
       display: table; }
-    /* line 570, /Users/sam/www/sites/okfn/lobbyingtransparency/source/css/main.css.scss */
+    /* line 578, /Users/sam/www/sites/okfn/lobbyingtransparency/source/css/main.css.scss */
     .site-footer > footer a {
       color: inherit;
       font-weight: bold; }
-    /* line 576, /Users/sam/www/sites/okfn/lobbyingtransparency/source/css/main.css.scss */
+    /* line 584, /Users/sam/www/sites/okfn/lobbyingtransparency/source/css/main.css.scss */
     .site-footer > footer .logos li {
       padding: 0 0 0.8rem 0; }
       @media (min-width: 40rem) {
-        /* line 576, /Users/sam/www/sites/okfn/lobbyingtransparency/source/css/main.css.scss */
+        /* line 584, /Users/sam/www/sites/okfn/lobbyingtransparency/source/css/main.css.scss */
         .site-footer > footer .logos li {
           display: inline-block;
           margin-right: 0.8rem;
           vertical-align: middle; } }
-      /* line 583, /Users/sam/www/sites/okfn/lobbyingtransparency/source/css/main.css.scss */
+      /* line 591, /Users/sam/www/sites/okfn/lobbyingtransparency/source/css/main.css.scss */
       .site-footer > footer .logos li img {
         height: 36px; }
-      /* line 587, /Users/sam/www/sites/okfn/lobbyingtransparency/source/css/main.css.scss */
+      /* line 595, /Users/sam/www/sites/okfn/lobbyingtransparency/source/css/main.css.scss */
       .site-footer > footer .logos li.eu {
         padding-top: 2px; }
-        /* line 590, /Users/sam/www/sites/okfn/lobbyingtransparency/source/css/main.css.scss */
+        /* line 598, /Users/sam/www/sites/okfn/lobbyingtransparency/source/css/main.css.scss */
         .site-footer > footer .logos li.eu img {
           height: 30px;
           float: left;
           margin-right: 10px; }
-        /* line 595, /Users/sam/www/sites/okfn/lobbyingtransparency/source/css/main.css.scss */
+        /* line 603, /Users/sam/www/sites/okfn/lobbyingtransparency/source/css/main.css.scss */
         .site-footer > footer .logos li.eu span {
           display: inline-block;
           max-width: 365px;
@@ -1340,7 +1358,7 @@ html.standards_index .contents > ul {
 /*
  * Image replacement
  */
-/* line 624, /Users/sam/www/sites/okfn/lobbyingtransparency/source/css/main.css.scss */
+/* line 632, /Users/sam/www/sites/okfn/lobbyingtransparency/source/css/main.css.scss */
 .ir {
   background-color: transparent;
   border: 0;
@@ -1348,7 +1366,7 @@ html.standards_index .contents > ul {
   /* IE 6/7 fallback */
   *text-indent: -9999px; }
 
-/* line 632, /Users/sam/www/sites/okfn/lobbyingtransparency/source/css/main.css.scss */
+/* line 640, /Users/sam/www/sites/okfn/lobbyingtransparency/source/css/main.css.scss */
 .ir:before {
   content: "";
   display: block;
@@ -1358,7 +1376,7 @@ html.standards_index .contents > ul {
 /*
  * Hide from both screenreaders and browsers: h5bp.com/u
  */
-/* line 643, /Users/sam/www/sites/okfn/lobbyingtransparency/source/css/main.css.scss */
+/* line 651, /Users/sam/www/sites/okfn/lobbyingtransparency/source/css/main.css.scss */
 .hidden {
   display: none !important;
   visibility: hidden; }
@@ -1366,7 +1384,7 @@ html.standards_index .contents > ul {
 /*
  * Hide only visually, but have it available for screenreaders: h5bp.com/v
  */
-/* line 652, /Users/sam/www/sites/okfn/lobbyingtransparency/source/css/main.css.scss */
+/* line 660, /Users/sam/www/sites/okfn/lobbyingtransparency/source/css/main.css.scss */
 .visuallyhidden {
   border: 0;
   clip: rect(0 0 0 0);
@@ -1381,7 +1399,7 @@ html.standards_index .contents > ul {
  * Extends the .visuallyhidden class to allow the element to be focusable
  * when navigated to via the keyboard: h5bp.com/p
  */
-/* line 668, /Users/sam/www/sites/okfn/lobbyingtransparency/source/css/main.css.scss */
+/* line 676, /Users/sam/www/sites/okfn/lobbyingtransparency/source/css/main.css.scss */
 .visuallyhidden.focusable:active,
 .visuallyhidden.focusable:focus {
   clip: auto;
@@ -1394,7 +1412,7 @@ html.standards_index .contents > ul {
 /*
  * Hide visually and from screenreaders, but maintain layout
  */
-/* line 682, /Users/sam/www/sites/okfn/lobbyingtransparency/source/css/main.css.scss */
+/* line 690, /Users/sam/www/sites/okfn/lobbyingtransparency/source/css/main.css.scss */
 .invisible {
   visibility: hidden; }
 
@@ -1409,7 +1427,7 @@ html.standards_index .contents > ul {
  * 2. The use of `table` rather than `block` is only necessary if using
  *    `:before` to contain the top-margins of child elements.
  */
-/* line 698, /Users/sam/www/sites/okfn/lobbyingtransparency/source/css/main.css.scss */
+/* line 706, /Users/sam/www/sites/okfn/lobbyingtransparency/source/css/main.css.scss */
 .clearfix:before,
 .clearfix:after {
   content: " ";
@@ -1417,7 +1435,7 @@ html.standards_index .contents > ul {
   display: table;
   /* 2 */ }
 
-/* line 704, /Users/sam/www/sites/okfn/lobbyingtransparency/source/css/main.css.scss */
+/* line 712, /Users/sam/www/sites/okfn/lobbyingtransparency/source/css/main.css.scss */
 .clearfix:after {
   clear: both; }
 
@@ -1425,7 +1443,7 @@ html.standards_index .contents > ul {
  * For IE 6/7 only
  * Include this rule to trigger hasLayout and contain floats.
  */
-/* line 713, /Users/sam/www/sites/okfn/lobbyingtransparency/source/css/main.css.scss */
+/* line 721, /Users/sam/www/sites/okfn/lobbyingtransparency/source/css/main.css.scss */
 .clearfix {
   *zoom: 1; }
 
@@ -1434,7 +1452,7 @@ html.standards_index .contents > ul {
    Inlined to avoid required HTTP connection: h5bp.com/r
    ========================================================================== */
 @media print {
-  /* line 724, /Users/sam/www/sites/okfn/lobbyingtransparency/source/css/main.css.scss */
+  /* line 732, /Users/sam/www/sites/okfn/lobbyingtransparency/source/css/main.css.scss */
   * {
     background: transparent !important;
     color: #000 !important;
@@ -1442,69 +1460,69 @@ html.standards_index .contents > ul {
     box-shadow: none !important;
     text-shadow: none !important; }
 
-  /* line 731, /Users/sam/www/sites/okfn/lobbyingtransparency/source/css/main.css.scss */
+  /* line 739, /Users/sam/www/sites/okfn/lobbyingtransparency/source/css/main.css.scss */
   a,
   a:visited {
     text-decoration: underline; }
 
-  /* line 736, /Users/sam/www/sites/okfn/lobbyingtransparency/source/css/main.css.scss */
+  /* line 744, /Users/sam/www/sites/okfn/lobbyingtransparency/source/css/main.css.scss */
   a[href]:after {
     content: " (" attr(href) ")"; }
 
-  /* line 740, /Users/sam/www/sites/okfn/lobbyingtransparency/source/css/main.css.scss */
+  /* line 748, /Users/sam/www/sites/okfn/lobbyingtransparency/source/css/main.css.scss */
   abbr[title]:after {
     content: " (" attr(title) ")"; }
 
   /*
    * Don't show links for images, or javascript/internal links
    */
-  /* line 748, /Users/sam/www/sites/okfn/lobbyingtransparency/source/css/main.css.scss */
+  /* line 756, /Users/sam/www/sites/okfn/lobbyingtransparency/source/css/main.css.scss */
   .ir a:after,
   a[href^="javascript:"]:after,
   a[href^="#"]:after {
     content: ""; }
 
-  /* line 754, /Users/sam/www/sites/okfn/lobbyingtransparency/source/css/main.css.scss */
+  /* line 762, /Users/sam/www/sites/okfn/lobbyingtransparency/source/css/main.css.scss */
   pre,
   blockquote {
     border: 1px solid #999;
     page-break-inside: avoid; }
 
-  /* line 760, /Users/sam/www/sites/okfn/lobbyingtransparency/source/css/main.css.scss */
+  /* line 768, /Users/sam/www/sites/okfn/lobbyingtransparency/source/css/main.css.scss */
   thead {
     display: table-header-group;
     /* h5bp.com/t */ }
 
-  /* line 764, /Users/sam/www/sites/okfn/lobbyingtransparency/source/css/main.css.scss */
+  /* line 772, /Users/sam/www/sites/okfn/lobbyingtransparency/source/css/main.css.scss */
   tr,
   img {
     page-break-inside: avoid; }
 
-  /* line 769, /Users/sam/www/sites/okfn/lobbyingtransparency/source/css/main.css.scss */
+  /* line 777, /Users/sam/www/sites/okfn/lobbyingtransparency/source/css/main.css.scss */
   img {
     max-width: 100% !important; }
 
   @page {
     margin: 0.5cm; }
-  /* line 777, /Users/sam/www/sites/okfn/lobbyingtransparency/source/css/main.css.scss */
+  /* line 785, /Users/sam/www/sites/okfn/lobbyingtransparency/source/css/main.css.scss */
   p,
   h2,
   h3 {
     orphans: 3;
     widows: 3; }
 
-  /* line 784, /Users/sam/www/sites/okfn/lobbyingtransparency/source/css/main.css.scss */
+  /* line 792, /Users/sam/www/sites/okfn/lobbyingtransparency/source/css/main.css.scss */
   h2,
   h3 {
     page-break-after: avoid; }
 
-  /* line 790, /Users/sam/www/sites/okfn/lobbyingtransparency/source/css/main.css.scss */
+  /* line 798, /Users/sam/www/sites/okfn/lobbyingtransparency/source/css/main.css.scss */
   .page-header .hashtag {
     display: none; }
 
-  /* line 797, /Users/sam/www/sites/okfn/lobbyingtransparency/source/css/main.css.scss */
+  /* line 805, /Users/sam/www/sites/okfn/lobbyingtransparency/source/css/main.css.scss */
   .guiding-notes .notes-heading a:after {
     display: none !important; }
-  /* line 802, /Users/sam/www/sites/okfn/lobbyingtransparency/source/css/main.css.scss */
+  /* line 810, /Users/sam/www/sites/okfn/lobbyingtransparency/source/css/main.css.scss */
   .guiding-notes > div {
     display: block !important; } }
