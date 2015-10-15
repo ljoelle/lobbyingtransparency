@@ -676,10 +676,6 @@ th {
 
 /* line 1, /Users/sam/www/sites/okfn/lobbyingtransparency/source/css/base/_typography.scss */
 body {
-  -webkit-font-feature-settings: "kern", "liga", "pnum";
-  -moz-font-feature-settings: "kern", "liga", "pnum";
-  -ms-font-feature-settings: "kern", "liga", "pnum";
-  font-feature-settings: "kern", "liga", "pnum";
   -webkit-font-smoothing: antialiased;
   color: #333;
   font-family: "Hind", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
